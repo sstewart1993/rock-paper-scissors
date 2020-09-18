@@ -1,23 +1,45 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <h1>Players Ready For a Battle!!</h1>
-    <p>player1</p>
+    <h1>Players Ready For Battle!!</h1>
+    <h2>player 1</h2>
 
+<!-- THIS IS THE DROP DOWN SELCTION -->
+    <label for="car">Choose a weapon:</label>
+    <select id="car" name="car">
+        <option value= "rock">Rock</option>
+        <option value= "paper">Paper</option>
+        <option value= "scissors">Scissors</option>
+    </select>
+<!-- THIS IS THE HYPER LINK ATTACHED TO THE SUBMIT BUTTON -->
+    <button><a class= "nav-link" href= "/submit">Submit</a></button>
+
+    <h2>Player 2</h2>
+    <label for="car">Choose a weapon:</label>
+    <select id="car" name="car">
+        <option value= "rock">Rock</option>
+        <option value= "paper">Paper</option>
+        <option value= "scissors">Scissors</option>
+    </select>
+
+    <button><a class= "nav-link" href= "/submit">Submit</a></button>
+
+
+<!-- HOW TO PULL UP PLAYER 1 ETC ON THE HOME PAGE NOT SURE I NEED THIS?
 {% for player in players %}
 <div>
     <p> {{player.name}}: {{player.choice}} 
 
     </p>
 </div>
-
-{% endfor %}
-
     
 </body>
