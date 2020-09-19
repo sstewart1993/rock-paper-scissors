@@ -12,16 +12,30 @@ def get_computer_move():
     choice = ["rock", "paper", "scissors"]
     return choice[random.randint(0,2)]
 
-def get_winner(player_choice, computer_choice):
+def get_player_winner(player1_choice, player2_choice):
+    winner = "player 2"
+
+    if player1_choice == player2_choice:
+        winner = "tie"
+    elif player1_choice == "rock" and player2_choice == "scissors":
+        winner = "player 1"
+    elif player1_choice == "scissors" and player2_choice == "paper":
+        winner = "player 1"
+    elif player1_choice == "paper" and player2_choice == "rock":
+        winner = "player 1"
+    return winner
+
+
+def get_computer_winner(player_choice, computer_choice):
     winner = "computer"
 
     if player_choice == computer_choice:
         winner = "tie"
-    if player_choice == "rock" and computer_choice == "scissors":
+    elif player_choice == "rock" and computer_choice == "scissors":
         winner = "player"
-    if player_choice == "scissors" and computer_choice == "paper":
+    elif player_choice == "scissors" and computer_choice == "paper":
         winner = "player"
-    if player_choice == "paper" and computer_choice == "rock":
+    elif player_choice == "paper" and computer_choice == "rock":
         winner = "player"
     return winner
 

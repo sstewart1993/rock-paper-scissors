@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+<title>{% block title %} Friends {% endblock %}</title>
+
+<body>
+{% block content %}
+    <h1>Players Ready For Battle!!</h1>
+    <h2>Player 2 choose your weapons:</h2>
+        <p><button><a href="{{ url_for('submit_player2', choice = 'rock') }}">Rock</a></button></p>
+        <p><button><a href="{{ url_for('submit_player2', choice = 'paper') }}">Paper</a></button></p>
+        <p><button><a href="{{ url_for('submit_player2', choice = 'scissors') }}">Scissors</a></button></p>
+</body>
+
+<nav><button><a href = "/">Home</a></button></nav>
+{% endblock %}
