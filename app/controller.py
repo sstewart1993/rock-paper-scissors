@@ -26,10 +26,10 @@ def submit_player1(choice):
 
 @app.route('/player1/player2/<choice>')
 def submit_player2(choice):
-    player1_choice = submit_player1   
+    submit_player1(choice)  
     player2_choice = choice.lower()
-    winner = get_player_winner(player1_choice, player2_choice)
-    return render_template("friends.html", winner=winner, player1_choice=player1_choice , player2_choice=player2_choice)
+    winner = get_player_winner(submit_player1, player2_choice)
+    return render_template("friends.html", winner=winner, player1_choice=submit_player1 , player2_choice=player2_choice)
 
 @app.route('/submit/<choice>')
 def submit(choice):
