@@ -5,11 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit</title>
+    <title>ARENA</title>
 </head>
 <body>
-    <h1> New page </h1>
-    <p> this is where i want it to come up WINNER etc</p>
+    <h1> ARENA </h1>
+
+    <p>player choice: {{ player_choice }}</p>
+    
+    <p>computer choice: {{ computer_choice }}</p>
+    <p>
+        {% if winner == "tie" %}
+        <h2> tie </h2>
+        {% elif winner == "player" %}
+        <h2> WINNER!! </h2>
+        {% elif winner == "computer" %}
+        <h2> LOSER </h2>
+
+        {% endif %}
+    </p>
 
 </body>
 </html>

@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +9,43 @@
 
 <body>
     <h1>Players Ready For Battle!!</h1>
-    <h2>player 1</h2>
+    <h2>Player choose your weapons:</h2>
+        <p><a href="{{ url_for('submit', choice = 'rock') }}">Rock</a></p>
+        <p><a href="{{ url_for('submit', choice = 'paper') }}">Paper</a></p>
+        <p><a href="{{ url_for('submit', choice = 'scissors') }}">Scissors</a></p>
+
+
 
 <!-- THIS IS THE DROP DOWN SELCTION -->
-    <label for="car">Choose a weapon:</label>
-    <select id="car" name="car">
+    <!-- <label for="choice">Choose a weapon:</label>
+    <select id="choice" name="choice">
         <option value= "rock">Rock</option>
         <option value= "paper">Paper</option>
         <option value= "scissors">Scissors</option>
-    </select>
+    </select> -->
+
 <!-- THIS IS THE HYPER LINK ATTACHED TO THE SUBMIT BUTTON -->
-    <button><a class= "nav-link" href= "/submit">Submit</a></button>
+    <!-- <button><a class= "nav-link" href= "/submit">Submit</a></button> -->
 
-    <h2>Player 2</h2>
-    <label for="car">Choose a weapon:</label>
-    <select id="car" name="car">
+    <!-- <h2>Player 2</h2>
+    <label for="choice">Choose a weapon:</label>
+    <select id="choice" name="choice">
         <option value= "rock">Rock</option>
         <option value= "paper">Paper</option>
         <option value= "scissors">Scissors</option>
     </select>
+    <button><a class= "nav-link" href= "/submit">Submit</a></button> -->
 
-    <button><a class= "nav-link" href= "/submit">Submit</a></button>
+
 
 
 <!-- HOW TO PULL UP PLAYER 1 ETC ON THE HOME PAGE NOT SURE I NEED THIS?
-{% for player in players %}
+<!-- {% for player in players %}
 <div>
     <p> {{player.name}}: {{player.choice}} 
 
     </p>
 </div>
+{% endfor %}
     
-</body>
+</body> -->

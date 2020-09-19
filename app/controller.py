@@ -12,6 +12,10 @@ def home():
 
 
 #  CREATES A NEW SUBMIT PAGE LINKED IN WITH THE SUBMIT BUTTON 
-@app.route("/submit")
-def submit():
-    return render_template("submit.html", title="Move", players=players)
+@app.route('/submit/<choice>')
+def submit(choice):
+    player_choice = choice.lower()    
+    computer_choice = get_computer_move()
+    winner = get_winner(player_choice, computer_choice)
+    return render_template("submit.html", winner=winner, player_choice=player_choice, computer_choice=computer_choice)
+    # return render_template("submit.html", title="Move", players=players)

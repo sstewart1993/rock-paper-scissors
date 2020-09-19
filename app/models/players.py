@@ -1,15 +1,32 @@
 from app.models.players_class import *
 import random
 
-# player1 = Players("Steve", "rock")
-# player2 = Players("Rob", "scissors")
+player1 = Players("Steve", "rock")
+player2 = Players("Rob", "scissors")
 
-# players = [player1, player2]
+players = [player1, player2]
+choice = ["rock", "paper", "scissors"]
 
 #  FUNCTION TO CREATE A RANDOM COMPUTER SELECTION
-def computer_move():
+def get_computer_move():
     choice = ["rock", "paper", "scissors"]
     return choice[random.randint(0,2)]
+
+def get_winner(player_choice, computer_choice):
+    winner = "computer"
+
+    if player_choice == computer_choice:
+        winner = "tie"
+    if player_choice == "rock" and computer_choice == "scissors":
+        winner = "player"
+    if player_choice == "scissors" and computer_choice == "paper":
+        winner = "player"
+    if player_choice == "paper" and computer_choice == "rock":
+        winner = "player"
+    return winner
+
+
+
 
 
 
