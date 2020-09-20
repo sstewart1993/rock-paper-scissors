@@ -21,19 +21,19 @@ def play_person():
 
 @app.route('/player1/<choice>')
 def submit_player1(choice):
-    player1_choice = play_person   
+    player1_choice = choice.capitalize()
     return render_template("player2.html", player1_choice=player1_choice)
 
-@app.route('/player1/player2/<choice>')
+@app.route('/player2/<choice>')
 def submit_player2(choice):
     submit_player1(choice)  
-    player2_choice = choice.lower()
+    player2_choice = choice.capitalize()
     winner = get_player_winner(submit_player1, player2_choice)
     return render_template("friends.html", winner=winner, player1_choice=submit_player1 , player2_choice=player2_choice)
 
 @app.route('/submit/<choice>')
 def submit(choice):
-    player_choice = choice.lower()    
+    player_choice = choice.capitalize()   
     computer_choice = get_computer_move()
     winner = get_computer_winner(player_choice, computer_choice)
     return render_template("submit.html", winner=winner, player_choice=player_choice, computer_choice=computer_choice)

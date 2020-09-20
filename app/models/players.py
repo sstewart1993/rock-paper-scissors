@@ -5,11 +5,11 @@ player1 = Players("Steve", "rock")
 player2 = Players("Rob", "scissors")
 
 players = [player1, player2]
-choice = ["rock", "paper", "scissors"]
+choice = ["Rock", "Paper", "Scissors"]
 
 #  FUNCTION TO CREATE A RANDOM COMPUTER SELECTION
 def get_computer_move():
-    choice = ["rock", "paper", "scissors"]
+    choice = ["Rock", "Paper", "Scissors"]
     return choice[random.randint(0,2)]
 
 def get_player_winner(player1_choice, player2_choice):
@@ -17,11 +17,11 @@ def get_player_winner(player1_choice, player2_choice):
 
     if player1_choice == player2_choice:
         winner = "tie"
-    elif player1_choice == "rock" and player2_choice == "scissors":
+    elif player1_choice == "Rock" and player2_choice == "Scissors":
         winner = "player 1"
-    elif player1_choice == "scissors" and player2_choice == "paper":
+    elif player1_choice == "Scissors" and player2_choice == "Paper":
         winner = "player 1"
-    elif player1_choice == "paper" and player2_choice == "rock":
+    elif player1_choice == "Paper" and player2_choice == "Rock":
         winner = "player 1"
     return winner
 
@@ -31,11 +31,11 @@ def get_computer_winner(player_choice, computer_choice):
 
     if player_choice == computer_choice:
         winner = "tie"
-    elif player_choice == "rock" and computer_choice == "scissors":
+    elif player_choice == "Rock" and computer_choice == "Scissors":
         winner = "player"
-    elif player_choice == "scissors" and computer_choice == "paper":
+    elif player_choice == "Scissors" and computer_choice == "Paper":
         winner = "player"
-    elif player_choice == "paper" and computer_choice == "rock":
+    elif player_choice == "Paper" and computer_choice == "Rock":
         winner = "player"
     return winner
 
